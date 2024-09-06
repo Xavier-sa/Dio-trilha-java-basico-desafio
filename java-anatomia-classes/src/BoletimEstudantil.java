@@ -1,5 +1,3 @@
-
-
 public class BoletimEstudantil {
 
     private String nome;
