@@ -1,4 +1,4 @@
-package edu.xavier.segundasemana;
+
 
 public class MinhaClasse {
 

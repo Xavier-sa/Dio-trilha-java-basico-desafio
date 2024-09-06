@@ -1,4 +1,4 @@
-package edu.xavier.priemeirasemana
+
 
 public class BoletimEstudantil {
 
