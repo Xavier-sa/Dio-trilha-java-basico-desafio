@@ -1,0 +1,5 @@
+Analisando candidatos:
+-ok
+
+Selecionando candidatos:
+-ok
