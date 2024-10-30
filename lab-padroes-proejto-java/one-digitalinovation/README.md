@@ -1,0 +1,1 @@
+## Esse projeto mostra como usar o padrão Singleton de uma maneira fácil. Ele também permite carregar configurações de um arquivo, o que é muito útil. Assim, em aplicações reais, podemos ter diferentes configurações para ambientes como desenvolvimento, teste e produção. Com isso, fica mais fácil gerenciar as configurações sem precisar mudar o código toda vez.

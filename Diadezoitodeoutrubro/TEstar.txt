@@ -1,0 +1,131 @@
+Descrição do Desafio
+Reforce seu conhecimento em Programação Orientada a Objetos (POO) em Java com um desafio de projeto totalmente prático. Para isso, os pilares da orientação a objetos são devidamente explorados no contexto bancário, onde o expert implementa um projeto de referência (disponibilizado no GitHub) de forma prática e interativa. Sendo assim, você poderá desenvolver sua capacidade de abstração reproduzindo essa solução. Além disso, caso queira ir além, implemente suas próprias evoluções e melhorias ;)
+
+Objetivo: O objetivo deste projeto prático hands-on é reforçar o conhecimento em Programação Orientada a Objetos (POO) em Java, através da implementação de um banco digital.
+
+Descrição: Neste projeto, será disponibilizado no GitHub um projeto de referência que utiliza os conceitos de POO e Java para criar um banco digital. O contexto bancário será explorado para explorar os pilares da orientação a objetos, e assim, os participantes poderão reproduzir a solução e desenvolver sua capacidade de abstração.
+
+Requisitos Técnicos:
+- Conhecimentos básicos de Programação Orientada a Objetos em Java;
+- Ambiente de desenvolvimento Java configurado;
+- Acesso à internet para acesso ao projeto de referência no GitHub;
+- Familiaridade com o uso de repositórios Git (opcional, mas recomendado);
+- Capacidade de abstração para reproduzir a solução proposta e implementar melhorias.
+
+
+
+public class Banco {
+    
+    private String nome;
+
+    public String getNome(){
+        return nome
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    
+}
+
+public class Cliente {
+    
+    public String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+
+
+public abstract class Conta implements IConta {
+    
+
+    private static final int  AGENCIA_PADRAO = 1;
+    private static int SEQUENCIAL = 1;
+    
+    protected int agencia;
+    protected  int numero;
+    protected  double saldo;
+
+
+    public Conta(){
+        this.agencia = Conta.AGENCIA_PADRAO;
+        this.numero = SEQUENCIAL++;
+    }
+    
+    @Override
+    public void sacar(double valor){
+        saldo -= valor;
+        
+    }
+    @Override
+    public void depositar(double valor){
+        saldo += valor;
+
+    }
+    @Override
+    public void transferir(double valor, Conta contaDestino){
+        this.sacar(valor);
+        contaDestino.depositar(valor);
+
+    }
+    public int getAgencia() {
+        return agencia;
+    }
+    public int getNumero() {
+        return numero;
+    }
+    public double getSaldo() {
+        return saldo;
+    }
+
+    
+public class ContaCorrente extends Conta{ 
+    
+    @Override
+    public void imprimirExtrato(){
+        System.out.println("=== Extrato Conta Corrente ===");
+        System.err.println(String.format("Agencia: %d", super.agencia)));
+        System.err.println(String.format("Conta: %d", super.numero)));
+        System.err.println(String.format("saldo: %d.2f", super.saldo)));
+    }
+}
+public class ContaPoupanca extends Conta {
+
+
+}
+    
+
+
+public class IConta {
+    
+    
+    void sacar(double valor);
+    void depositar(double valor);
+    void transferir(double valor, Conta contaDestinoConta);
+    void imprimirExtrato();
+
+}
+    
+
+
+
+}
+    }
+
+    
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Conta cc = new ContaCorrente();
+        Conta poupanca = new ContaPoupanca();
+
+        System.out.println();
+
+    }
+}
